@@ -13,6 +13,8 @@ app.use(bodyParser.json());
 app.post('/livros', LivroController.cadastrarLivro);
 app.get('/livros', LivroController.consultarLivrosDisponiveis);
 app.delete('/livros/:isbn', LivroController.deletarLivro);
+app.get('/livros/:isbn', LivroController.consultarLivroPorIsbn);
+
 
 
 //Rota Autores
@@ -25,6 +27,8 @@ app.delete('/autores/:nome', AutorController.deletarAutor);
 app.post('/usuarios', UsuarioController.cadastrarUsuario); 
 app.get('/usuarios', UsuarioController.listarUsuarios); 
 app.delete('/usuarios/:email', UsuarioController.deletarUsuario); 
+app.get('/usuarios/:email', UsuarioController.consultarUsuarioPorEmail);
+
 
 // Rotas Empréstimos
 app.post('/emprestimos', EmprestimoController.realizarEmprestimo); 
